@@ -1,0 +1,87 @@
+---
+# Mapping of System ID prefix -> local folder name
+folder_map:
+ optiplex:  OptiPlex
+ latitude:  Latitude
+ precision: Precision
+
+# Conversion of filenames as found on the Dell website to our own scheme
+# Regex order = Order of execution
+
+file_conversion:
+# Remove dashes
+ -: 
+# Remove underscores
+ _:
+# Keep file extensions lowercase
+ EXE: exe
+# Remove OptiPlex
+ OptiPlex:
+# Remove O at the beginning
+ ^O:
+# Replace AIO by A
+ AIO: A
+# Replace T for Precision TOWERs
+ ^T:
+
+# The system IDs of all our Dell devices
+system_ids:
+ # Optiplex
+ - optiplex-755
+ - optiplex-760
+ - optiplex-780
+ - optiplex-790
+ - optiplex-9010
+ - optiplex-9020-desktop
+ - optiplex-9010-aio
+ - optiplex-9020-aio
+ - optiplex-960
+ - optiplex-980
+ - optiplex-990
+ - optiplex-7010
+ - optiplex-7020-desktop
+
+ # Precision
+ - precision-t3500
+ - precision-t3600
+ - precision-t3610-workstation
+ - precision-t5810-workstation
+ - precision-t5400
+ - precision-t5500
+ - precision-t7910-workstation
+ - precision-t7400
+ - precision-t1600
+ - precision-t7500
+ - precision-t7600
+ - precision-t1700-workstation
+ - precision-t7610-workstation
+ - precision-t3400
+
+ # Latitude
+ - latitude-d620
+ - latitude-d630
+ - latitude-e6500
+ - latitude-e4200
+ - latitude-e4300
+ - latitude-e6510
+ - latitude-e6520
+ - latitude-e4310
+ - latitude-e6530
+ - latitude-e6540-laptop
+ - latitude-e5410
+ - latitude-e5420
+ - latitude-e7440-ultrabook
+ - latitude-e7450-ultrabook
+ - latitude-e5440-laptop
+ - latitude-e5450-laptop
+ - latitude-e5500
+ - latitude-e5540-laptop
+ - latitude-e6220
+ - latitude-e6230
+ - latitude-e6320
+ - latitude-e6330
+ - latitude-e6400
+ - latitude-e6410
+ - latitude-e6420
+ - latitude-e6430
+
