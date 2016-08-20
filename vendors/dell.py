@@ -85,25 +85,34 @@ class DellBios(BiosUpdater):
         # if data["bios"]
         data["bios"].append(d)
 
-    def update(self, data):
+    def update(self, data, sid=None):
         # num_sys_ids = len(self.system_ids)
         http = urllib3.HTTPConnectionPool(
             DellBios.BIOS_BASE,
             timeout=urllib3.Timeout(read=20.0), retries=10)
-        for sysid in self.system_ids:
+
+        if sid is not None:
+            sysids = [sid.strip()]
+        else:
+            sysids = self.system_ids
+
+        for sysid in sysids:
             options = {}
             # if entry is not a simple name, but a dictionary
             if type(sysid) is not str:
                 key = sysid.keys()[0]
                 options = sysid[key]
-		if options is None:
-			logger.error("Config error at %s" % sysid)
-			sys.exit(1)
+
+                if options is None:
+                    logger.error("Config error at %s" % sysid)
+                    sys.exit(1)
                 sysid = key
+
             try:
                 bioses = self._get_bios_info(http, sysid)
-            except Error as e:
-                logger.warning("Issue at %s: %s" % sysid, str(e))
+            except Exception as e:
+                print(e)
+                #logger.warning("Issue at %s: %s" % sysid, e.message)
                 continue
 
             folder = self._folder_for_sysid(sysid)

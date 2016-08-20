@@ -11,47 +11,48 @@
 #           version: a12
 #         - file: Dell/Latitude/bla.exe
 #           version: a13
-                            
-dell:
- name: "Dell"
- folder_map:
-   optiplex:  OptiPlex
-   latitude:  Latitude
-   precision: Precision
-
- # The system IDs of all our Dell devices
- system_ids:
-  # Optiplex
-  - optiplex-790: {requires: [a05, a10]}
-  - optiplex-9010-aio
-  - optiplex-9010
-  - optiplex-9020-desktop
-  - optiplex-9020-aio
-  - optiplex-960
-  - optiplex-980
-  - optiplex-990: {requires: [a05, a10]}
-  - optiplex-5040-desktop
-  - optiplex-7010
-  - optiplex-7020-desktop
-  - optiplex-7040-desktop
- 
-  # Precision
-  - precision-t1700-workstation
-  - precision-t7610-workstation
-  - precision-t3400
-  - precision-m4600: {requires: [a03, a08]}
- 
-  # Latitude
-  - latitude-e5470-laptop
-  - latitude-e5500
-  - latitude-e5540-laptop
-  - latitude-e6220: {requires: [a02, a04]}
-  - latitude-e6230
-  - latitude-e6320: {requires: [a05, a08]}
-  - latitude-e6330
-  - latitude-e6400
-  - latitude-e6410: {requires: [a09, a11]}
-  - latitude-e6420: {requires: [a05, a08]}
-  - latitude-e6430
-  - latitude-e7250-ultrabook
-
+output_folder: "/home/christoph/workspace/biosupdate/out/"
+vendors:                            
+  dell:
+   name: "Dell"
+   folder_map:
+     optiplex:  OptiPlex
+     latitude:  Latitude
+     precision: Precision
+  
+   # The system IDs of all our Dell devices
+   system_ids:
+    # Optiplex
+    - optiplex-790: {requires: [a05, a10]}
+    - optiplex-9010-aio
+    - optiplex-9010
+    - optiplex-9020-desktop
+    - optiplex-9020-aio
+    - optiplex-960
+    - optiplex-980
+    - optiplex-990: {requires: [a05, a10]}
+    - optiplex-5040-desktop
+    - optiplex-7010
+    - optiplex-7020-desktop
+    - optiplex-7040-desktop
+   
+    # Precision
+    - precision-t1700-workstation
+    - precision-t7610-workstation
+    - precision-t3400
+    - precision-m4600: {requires: [a03, a08]}
+   
+    # Latitude
+    - latitude-e5470-laptop
+    - latitude-e5500
+    - latitude-e5540-laptop
+    - latitude-e6220: {requires: [a02, a04]}
+    - latitude-e6230
+    - latitude-e6320: {requires: [a05, a08]}
+    - latitude-e6330
+    - latitude-e6400
+    - latitude-e6410: {requires: [a09, a11]}
+    - latitude-e6420: {requires: [a05, a08]}
+    - latitude-e6430
+    - latitude-e7250-ultrabook
+  
