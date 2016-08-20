@@ -11,7 +11,7 @@
 #           version: a12
 #         - file: Dell/Latitude/bla.exe
 #           version: a13
-output_folder: "/home/christoph/workspace/biosupdate/out/"
+#output_folder: "/home/christoph/workspace/biosupdate/out/"
 vendors:                            
   dell:
    name: "Dell"
