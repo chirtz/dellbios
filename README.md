@@ -5,7 +5,7 @@ Usage:
 python biosupdate.py <output-folder>
 ```
 
-``biosconfig.yaml` defines the machine types for which BIOS upgrades should be downloaded.
+``biosconfig.yaml`` defines the machine types for which BIOS upgrades should be downloaded.
 The script also produces a ``results.json`` file with a mapping of machine types to their corresponding current BIOS versions.
 
 
