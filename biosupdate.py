@@ -8,7 +8,6 @@ import logging
 
 # Defined vendors and handlers #
 from vendors.dell import DellBios
-from vendors.hp import HPBios
 BIOS_HANDLERS = {"dell": DellBios}
 #
 
